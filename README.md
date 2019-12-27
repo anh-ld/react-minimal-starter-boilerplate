@@ -1,9 +1,21 @@
-## Webpack boilerplate with React, Typescript, CSS, ES6 support.
+## React Boilerplate
+
+### A React boilerplate with Typescript, CSS/SASS/SCSS/styled-components, SVG, ES6 supports.
+
+Install dependencies
+
+```
+yarn
+```
 
 Run
 
-> yarn start
+```
+yarn start
+```
 
 Build
 
-> yarn build
+```
+yarn build
+```

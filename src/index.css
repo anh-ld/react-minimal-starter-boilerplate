@@ -1,0 +1,16 @@
+/* beVietnam */
+@font-face {
+  font-family: 'be';
+  src: url('./assets/be.woff2') format('woff2'), url('./assets/be.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.css-heading {
+  padding: 5px;
+  font-size: 20px;
+  font-family: monospace;
+  font-weight: normal;
+  border-radius: 3px;
+  border: 3px solid blue;
+}
