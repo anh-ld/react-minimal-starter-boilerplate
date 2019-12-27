@@ -7,6 +7,9 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 const htmlWebpackPlugin = new HtmlWebPackPlugin({
   template: "template/index.html",
+  title: "Custom Title",
+  favicon: 'template/favicon.ico',
+  meta: {viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no'}
 });
 
 const options = {
