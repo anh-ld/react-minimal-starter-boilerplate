@@ -1,6 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin")
 const DashboardPlugin = require("webpack-dashboard/plugin")
-const CleanWebpackPlugin = require("clean-webpack-plugin")
+const {CleanWebpackPlugin} = require("clean-webpack-plugin")
 const RobotstxtPlugin = require("robotstxt-webpack-plugin")
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
@@ -15,7 +15,7 @@ const htmlWebpackPlugin = new HtmlWebPackPlugin({
     meta: {viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"}
 })
 
-const cleanWebpackPlugin = new CleanWebpackPlugin(['build'], {root})
+const cleanWebpackPlugin = new CleanWebpackPlugin()
 
 const miniCssExtractPlugin = new MiniCssExtractPlugin({
     filename: 'styles/[name].[contenthash:8].css',
