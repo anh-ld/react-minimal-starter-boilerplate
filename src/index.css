@@ -1,16 +1,36 @@
-/* beVietnam */
 @font-face {
-  font-family: 'be';
-  src: url('./assets/be.woff2') format('woff2'), url('./assets/be.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'beVietnam';
+    src: url('../static/fonts/be.woff2') format('woff2'), url('../static/fonts/be.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.css-heading {
-  padding: 5px;
-  font-size: 20px;
-  font-family: monospace;
-  font-weight: normal;
-  border-radius: 3px;
-  border: 3px solid blue;
+body {
+    padding: 0;
+    margin: 0;
+    font-family: beVietnam, sans-serif;
+}
+
+.app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #dee1e1;
+}
+
+.app img {
+    height: 40vh;
+    margin-bottom: 32px;
+}
+
+.app div {
+    color: #2079c3;
+    font-size: 24px;
+    line-height: 1.75;
+}
+
+.app div span {
+    color: #273333;
 }

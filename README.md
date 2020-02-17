@@ -1,15 +1,12 @@
-## React Boilerplate
+### Minimal React Boilerplate
 
-### Supports
+#### Supports
 * Typescript
-* CSS
-* SASS/SCSS
+* CSS / SASS / SCSS
 * styled-components
-* SVG
-* external font-face
 * ES6
 
-### Running
+#### Running
 
 Install dependencies
 
@@ -28,3 +25,7 @@ Build
 ```
 yarn build
 ```
+
+#### Credit
+
+* Illustration by [Undraw](https://undraw.co/).
