@@ -1,32 +1,13 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin")
-const DashboardPlugin = require("webpack-dashboard/plugin")
 const {CleanWebpackPlugin} = require("clean-webpack-plugin")
 const RobotstxtPlugin = require("robotstxt-webpack-plugin")
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const WebpackBar = require('webpackbar')
+const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin')
 
 const paths = require("./paths")
 
-const {root, src, build, assets} = paths
-
-const htmlWebpackPlugin = new HtmlWebPackPlugin({
-    template: assets + "/index.html",
-    title: "React Boilerplate",
-    favicon: assets + "/favicon.ico",
-    meta: {viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"}
-})
-
-const cleanWebpackPlugin = new CleanWebpackPlugin()
-
-const miniCssExtractPlugin = new MiniCssExtractPlugin({
-    filename: 'styles/[name].[contenthash:8].css',
-    chunkFilename: '[id].css',
-})
-
-const robotstxtPlugin = new RobotstxtPlugin({
-    filePath: "./robots.txt",
-})
-
-const dashboardPlugin = new DashboardPlugin()
+const {src, build, assets, node_modules} = paths
 
 module.exports = {
     entry: [src + "/index.tsx"],
@@ -79,10 +60,21 @@ module.exports = {
         ]
     },
     plugins: [
-        cleanWebpackPlugin,
-        miniCssExtractPlugin,
-        htmlWebpackPlugin,
-        robotstxtPlugin,
-        dashboardPlugin
+        new WatchMissingNodeModulesPlugin(node_modules),
+        new CleanWebpackPlugin(),
+        new MiniCssExtractPlugin({
+            filename: 'styles/[name].[contenthash:8].css',
+            chunkFilename: '[id].css',
+        }),
+        new HtmlWebPackPlugin({
+            template: assets + "/index.html",
+            title: "React Boilerplate",
+            favicon: assets + "/favicon.ico",
+            meta: {viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"}
+        }),
+        new RobotstxtPlugin({
+            filePath: "./robots.txt",
+        }),
+        new WebpackBar()
     ]
 }

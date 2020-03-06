@@ -5,4 +5,5 @@ module.exports = {
     src: path.resolve(__dirname, '../src'),
     build: path.resolve(__dirname, '../build'),
     assets: path.resolve(__dirname, '../static'),
+    node_modules: path.resolve(__dirname, '../node_modules'),
 }

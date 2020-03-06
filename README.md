@@ -1,12 +1,10 @@
-### Minimal React Boilerplate
-
-#### Supports
+### Supports
 * Typescript
 * CSS / SASS / SCSS
 * styled-components
 * ES6
 
-#### Running
+### Running
 
 Install dependencies
 
@@ -26,6 +24,7 @@ Build
 yarn build
 ```
 
-#### Credit
+### Credit
 
 * Illustration by [Undraw](https://undraw.co/).
+* Sample [Be Vietnam](https://fontesk.com/be-vietnam-typeface/) font by [be](https://be.xyz).

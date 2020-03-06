@@ -14,7 +14,7 @@
     "alwaysStrict": true,
     "strictNullChecks": false,
     "downlevelIteration": true,
-    "baseUrl": ".",
+    "baseUrl": "."
   },
   "include": [
     "./src/"

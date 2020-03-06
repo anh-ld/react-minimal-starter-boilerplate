@@ -34,3 +34,9 @@ body {
 .app div span {
     color: #273333;
 }
+
+.app div span.entry {
+    padding: 0 8px;
+    background-color: lightgrey;
+    border-radius: 3px;
+}

@@ -10,13 +10,26 @@ const {build} = paths
 module.exports = merge(common, {
     mode: "production",
     devtool: "false",
+    bail: true,
     output: {
         path: build,
         publicPath: "/",
         filename: "[name].[contenthash:8].js"
     },
     optimization: {
-        minimizer: [new TerserPlugin(), new OptimizeCSSAssetsPlugin({})],
+        minimize: true,
+        minimizer: [
+            new TerserPlugin({
+                terserOptions: {
+                    parse: {ecma: 8},
+                    compress: {ecma: 5, warnings: false, comparisons: false, inline: 2},
+                    mangle: {safari10: true},
+                    keep_classnames: true,
+                    keep_fnames: true,
+                    output: {ecma: 5, comments: false, ascii_only: true},
+                },
+            }),
+            new OptimizeCSSAssetsPlugin({})],
         splitChunks: {
             cacheGroups: {
                 vendor: {
